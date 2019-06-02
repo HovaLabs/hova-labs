@@ -2,19 +2,21 @@ import React, { Fragment, Suspense } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { theme } from './design-system/theme';
-import { GlobalStyle, Loading } from './design-system/components';
+import { GlobalStyle, Loading, ResponsiveProvider } from './design-system/components';
 import { Routes } from './Routes';
 
 function App() {
   return (
-    <Suspense fallback={<Loading />}>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <ResponsiveProvider>
         <Fragment>
           <GlobalStyle />
-          <Routes />
+          <Suspense fallback={<Loading />}>
+            <Routes />
+          </Suspense>
         </Fragment>
-      </ThemeProvider>
-    </Suspense>
+      </ResponsiveProvider>
+    </ThemeProvider>
   );
 }
 
