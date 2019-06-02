@@ -23,28 +23,28 @@ const fontWeight = {
 
 export const typography = {
   headingLarge: css`
-    color: ${p => p.colors.primary};
+    color: ${p => p.theme.colors.primary};
     font-size: 70px;
     font-weight: ${fontWeight.bold};
     letter-spacing: 0;
     line-height: 92px;
   `,
   headingMedium: css`
-    color: ${p => p.colors.primary};
+    color: ${p => p.theme.colors.primary};
     font-size: 50px;
     font-weight: ${fontWeight.normal};
     letter-spacing: 0;
     line-height: 65px;
   `,
   headingSmall: css`
-    color: ${p => p.colors.primary};
+    color: ${p => p.theme.colors.primary};
     font-size: 30px;
     font-weight: ${fontWeight.normal};
     letter-spacing: 0;
     line-height: 39px;
   `,
   bodyText: css`
-    color: ${p => p.colors.primary};
+    color: ${p => p.theme.colors.primary};
     font-size: 22px;
     font-weight: ${fontWeight.normal};
     letter-spacing: 0;

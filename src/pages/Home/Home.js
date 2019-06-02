@@ -6,7 +6,7 @@ export function Home() {
   const { t } = useTranslation();
 
   return (
-    <AbsoluteFlex bg="primary">
+    <AbsoluteFlex>
       <div>{t('pages.home.title')}</div>
     </AbsoluteFlex>
   );
