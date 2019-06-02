@@ -5,5 +5,9 @@ import { AbsoluteFlex } from 'styled-system-flex-box';
 export function Home() {
   const { t } = useTranslation();
 
-  return <AbsoluteFlex bg="primary">{t('pages.home.title')}</AbsoluteFlex>;
+  return (
+    <AbsoluteFlex bg="primary">
+      <div>{t('pages.home.title')}</div>
+    </AbsoluteFlex>
+  );
 }
