@@ -6,6 +6,11 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  body {
+    font-family: 'Roboto', sans-serif;
+    ${p => p.theme.typography.bodyText}
+  }
+
   * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
