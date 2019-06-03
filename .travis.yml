@@ -4,8 +4,8 @@ node_js:
 os:
   - linux
 stages:  # determines the order everything runs in
-  - test
-  - deploy
+  - name: test
+  - name: deploy
 jobs:  #  specifies the actual job
   include:
     - stage: test
