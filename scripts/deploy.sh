@@ -40,6 +40,10 @@ do
   # https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax
   DEPLOY_SUBDOMAIN=`echo "$DEPLOY_SUBDOMAIN_UNFORMATTED" | sed -r 's/[\/|\.]+/\-/g'`
   DEPLOY_DOMAIN=https://${DEPLOY_SUBDOMAIN}-${REPO_NAME}-${REPO_OWNER}.surge.sh
+  if [ ${DEPLOY_SUBDOMAIN} == "master" ]
+  then
+    DEPLOY_DOMAIN=https://hovatechnologies.com
+  fi
   surge --project ${DEPLOY_PATH} --domain $DEPLOY_DOMAIN;
   if [ "$TRAVIS_PULL_REQUEST" != "false" ]
   then

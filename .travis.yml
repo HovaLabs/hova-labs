@@ -3,9 +3,13 @@ node_js:
   - 8
 os:
   - linux
-script:
-  - npm test
-  - npm run build
-after_success:
-  - chmod ugo+x ./scripts/deploy.sh
-  - ./scripts/deploy.sh
+stages:  # determines the order everything runs in
+- test
+- deploy
+jobs:  #  specifies the actual job
+  include:
+    - stage: test
+      npm test
+    - stage: deploy
+      chmod ugo+x ./scripts/deploy.sh
+      ./scripts/deploy.sh
