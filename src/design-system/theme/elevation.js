@@ -1,3 +1,1 @@
-export const elevation = {
-
-};
+export const elevation = {};

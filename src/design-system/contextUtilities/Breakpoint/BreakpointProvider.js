@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
+import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
 
 import { BreakpointContext } from './BreakpointContext';
@@ -9,7 +10,9 @@ export function BreakpointProvider({ children }) {
   function getCurrentBreakpointKey() {
     // Fall-back to the smallest breakpoint if nothing else matches
     let currentBreakpointKey = Object.keys(theme.breakpoints)[0];
-    for (const [key, value] of Object.entries(theme.breakpoints)) {
+    const breakpointEntries = Object.entries(theme.breakpoints);
+    for (let i = 0; i < breakpointEntries.length; i += 1) {
+      const [key, value] = breakpointEntries[i];
       if (window.innerWidth >= value) {
         currentBreakpointKey = key;
       }
@@ -35,3 +38,9 @@ export function BreakpointProvider({ children }) {
   const value = useMemo(() => ({ BreakpointKey }), [BreakpointKey]);
   return <BreakpointContext.Provider value={value}>{children}</BreakpointContext.Provider>;
 }
+BreakpointProvider.defaultProps = {
+  children: undefined
+};
+BreakpointProvider.propTypes = {
+  children: PropTypes.node
+};

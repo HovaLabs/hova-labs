@@ -14,6 +14,7 @@ rules:
     - extensions:
         - .js
         - .jsx
+  import/prefer-default-export: 0
   # warnings allow building in development mode but not merging into develop
   no-debugger: 1 # do allow debugger in development mode
   react/prop-types: 1 # don't enforce prop-type checking in development mode
