@@ -4,7 +4,6 @@
 
 it('renders without crashing', () => {
   const foo = 'bar';
-  return true;
   // const div = document.createElement('div');
   // ReactDOM.render(<App />, div);
   // ReactDOM.unmountComponentAtNode(div);
