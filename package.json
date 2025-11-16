@@ -11,7 +11,7 @@
     "react-dom": "^16.8.6",
     "react-i18next": "^10.11.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "styled-components": "^4.2.1",
     "styled-system": "^4.2.4",
     "styled-system-flex-box": "^1.0.0"
@@ -38,7 +38,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "^9.39.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.17.3",
@@ -46,7 +46,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
     "git-scripts": "^0.2.1",
-    "husky": "^2.3.0",
+    "husky": "^9.1.7",
     "prettier": "^1.17.1",
     "surge": "^0.21.0"
   },
